@@ -6,13 +6,13 @@ local gPID = game.PlaceId
 
 local files = {
     ["Universal"] = {
-        File = require("games/Universal/init.luau")
+        File = require("games/Universal/init.luau"),
+        Places = {}
     },
-    ["Phantom Forces"] = {
-        File = require("games/PhantomForces/init.luau"), 
+    ["Example Game"] = {
+        File = require("games/ExampleGame/init.luau"), 
         Places = {
-            13997018456, 
-            13997264379
+            123456789
         }
     },
 }
