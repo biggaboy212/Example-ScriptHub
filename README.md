@@ -14,4 +14,4 @@ Authored by biggaboy212
 
 ### To Build
 
-Use [DarkLua](https://github.com/seaofvoices/darklua/releases/tag/v0.16.0)
+Use [DarkLua](https://github.com/seaofvoices/darklua/releases/latest)
