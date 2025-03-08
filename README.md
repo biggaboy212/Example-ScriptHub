@@ -1,10 +1,10 @@
-# RIOT V2
+# Example Script Hub
 
 Authored by biggaboy212
 
 ## Project Setup
 
-### Extensions used (biggaboy212)
+### Extensions used
 
 [Github Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
 
