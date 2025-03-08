@@ -1,0 +1,12 @@
+{
+    "luau-lsp.types.definitionFiles": [
+        "src\\globals\\drawing.d.luau",
+        "src\\globals\\synapse.d.luau"
+    ],
+    "luau-lsp.sourcemap.sourcemapFile": "",
+    "luau-lsp.sourcemap.rojoProjectFile": "",
+    "luau-lsp.sourcemap.enabled": false,
+    "luau-lsp.sourcemap.autogenerate": false,
+    "luau-lsp.completion.autocompleteEnd": true,
+    "luau-lsp.completion.enableFragmentAutocomplete": true
+}
