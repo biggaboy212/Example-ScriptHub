@@ -4,9 +4,7 @@ Authored by biggaboy212
 
 ## Project Setup
 
-### Extensions used
-
-[Github Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
+### Extensions Recommended
 
 [Luau Language Server](https://marketplace.visualstudio.com/items?itemName=JohnnyMorganz.luau-lsp)
 
