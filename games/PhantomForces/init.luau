@@ -4,9 +4,9 @@ local file = {}
 
 --// Modules
 local Functions = require("core/functions.luau")
-local UI 		= require("core/ui.luau")
-local ESP 		= require("modules/esp.luau")
-local Aimbot 	= require("modules/aimbot.luau")
+local UI = require("core/ui.luau")
+local ESP = require("modules/esp.luau")
+local Aimbot = require("modules/aimbot.luau")
 
 --// Variables
 local LocalPlayer: Player = Functions.GetPlayer()
