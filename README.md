@@ -16,4 +16,5 @@ Look at the wiki to start: https://github.com/biggaboy212/Example-ScriptHub/wiki
 
 ### To Build
 
-Use [DarkLua](https://github.com/seaofvoices/darklua/releases/latest)
+Install [DarkLua](https://github.com/seaofvoices/darklua/releases/latest)
+Run [build.bat](build/build.bat)
