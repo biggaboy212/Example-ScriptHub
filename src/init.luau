@@ -9,12 +9,13 @@ local files = {
         File = require("games/Universal/init.luau"),
         Places = {}
     },
-    ["Example Game"] = {
-        File = require("games/ExampleGame/init.luau"), 
+    ["Blank Base"] = {
+        File = require("games/BlankBase/init.luau"), 
         Places = {
-            123456789
+            1234567890, -- List of PlaceId's
+            0987654321
         }
-    },
+    }
 }
 
 for gameName, data in pairs(files) do

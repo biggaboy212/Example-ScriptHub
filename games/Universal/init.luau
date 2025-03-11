@@ -2,17 +2,17 @@
 
 local file = {}
 
---// Modules
-local Functions = require("core/functions.luau")
-local UI = require("core/ui.luau")
-local ESP = require("modules/esp.luau")
-local Aimbot = require("modules/aimbot.luau")
-
---// Variables
-local LocalPlayer: Player = Functions.GetPlayer()
-
---// Logic
 function file.init(gameName)
+	--// Modules
+	local Functions = require("core/functions.luau")
+	local UI = require("core/ui.luau")
+	local ESP = require("modules/esp.luau")
+	local Aimbot = require("modules/aimbot.luau")
+
+	--// Variables
+	local LocalPlayer: Player = Functions.GetPlayer()
+
+	--// Logic
 	local Window = UI:Window({
 		Title = "SuperCool Hub | " .. gameName
 	})
@@ -30,23 +30,59 @@ function file.init(gameName)
 	}
 
 	-- [[ COMBAT ]] --
-	Tabs.Combat:Toggle({
+
+	--// Aimbot Section
+	local AimbotSection = Tabs.Combat:Section({ Label = "Aimbot" })
+
+	AimbotSection:Toggle({
 		Label = "Aimbot",
 		Callback = function(self, Value)
 			Aimbot.Enabled = Value
 		end
 	})
 
+	AimbotSection:Slider({
+		Label = "Aimbot Smoothing",
+		Min = 0,
+		Max = 20,
+		Value = 10,
+		Callback = function(self, Value)
+			Aimbot.Smoothing = Value
+		end
+	})
+
 	-- [[ VISUALS ]] --
-	Tabs.Visuals:Toggle({
+
+	--// ESP Section
+	local ESPSection = Tabs.Visuals:Section({ Label = "ESP" })
+
+	ESPSection:Toggle({
 		Label = "ESP",
 		Callback = function(self, Value)
 			ESP.Enabled = Value
 		end
 	})
 
+	ESPSection:Toggle({
+		Label = "Boxes",
+		Callback = function(self, Value)
+			ESP.Boxes = Value
+		end
+	})
+
+	ESPSection:Toggle({
+		Label = "Tracers",
+		Callback = function(self, Value)
+			ESP.Tracers = Value
+		end
+	})
+
 	-- [[ PLAYER ]] --
-	Tabs.Visuals:Slider({
+
+	--// Player Modification Section
+	local PlayerModsSection = Tabs.Visuals:Section({ Label = "Player Modifications" })
+
+	PlayerModsSection:Slider({
 		Label = "Player Speed",
 		Min = 1,
 		Max = 100,

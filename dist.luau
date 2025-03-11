@@ -21,16 +21,20 @@ b.GetHumanoid(c)local d,e=pcall(function()local d=b.GetCharacter(c)return d and
 d:FindFirstChildOfClass'Humanoid'or nil end)return d and e or nil end return b
 end function a.b()local b={}function b:Window(c)end return b end function a.c()
 local b={Enabled=false}b.Enable=function()end return b end function a.d()local b
-={Enabled=false}b.Enable=function()end return b end function a.e()local b,c,d,e,
-f={},a.load'a',a.load'b',a.load'c',a.load'd'local g=c.GetPlayer()function b.init
-(h)local i=d:Window{Title='SuperCool Hub | '..h}local j={Combat=i:Tab{Label=
-'Combat'},Visuals=i:Tab{Label='Visuals'},Player=i:Tab{Label='Player'}}j.Combat:
-Toggle{Label='Aimbot',Callback=function(k,l)f.Enabled=l end}j.Visuals:Toggle{
-Label='ESP',Callback=function(k,l)e.Enabled=l end}j.Visuals:Slider{Label=
-'Player Speed',Min=1,Max=100,Value=16,Callback=function(k,l)local m=c.
-GetHumanoid(g)if m then m.WalkSpeed=l end end}end return b end function a.f()
+={Enabled=false}b.Enable=function()end return b end function a.e()local b={}
+function b.init(c)local d,e,f,g=a.load'a',a.load'b',a.load'c',a.load'd'local h,i
+=d.GetPlayer(),e:Window{Title='SuperCool Hub | '..c}local j={Combat=i:Tab{Label=
+'Combat'},Visuals=i:Tab{Label='Visuals'},Player=i:Tab{Label='Player'}}local k=j.
+Combat:Section{Label='Aimbot'}k:Toggle{Label='Aimbot',Callback=function(l,m)g.
+Enabled=m end}k:Slider{Label='Aimbot Smoothing',Min=0,Max=20,Value=10,Callback=
+function(l,m)g.Smoothing=m end}local l=j.Visuals:Section{Label='ESP'}l:Toggle{
+Label='ESP',Callback=function(m,n)f.Enabled=n end}l:Toggle{Label='Boxes',
+Callback=function(m,n)f.Boxes=n end}l:Toggle{Label='Tracers',Callback=function(m
+,n)f.Tracers=n end}local m=j.Visuals:Section{Label='Player Modifications'}m:
+Slider{Label='Player Speed',Min=1,Max=100,Value=16,Callback=function(n,o)local p
+=d.GetHumanoid(h)if p then p.WalkSpeed=o end end}end return b end function a.f()
 local b={}function b.init(c)end return b end end local b=cloneref(game)local c,d
-=b.PlaceId,{Universal={File=a.load'e',Places={}},['Example Game']={File=a.load
-'f',Places={123456789}}}for e,f in pairs(d)do if f.Places then for g,h in
+=b.PlaceId,{Universal={File=a.load'e',Places={}},['Blank Base']={File=a.load'f',
+Places={1234567890,987654321}}}for e,f in pairs(d)do if f.Places then for g,h in
 ipairs(f.Places)do if h==c then f.File.init(e)return end end end end d.Universal
 .File.init'Universal'
