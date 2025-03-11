@@ -3,16 +3,16 @@
 local file = {}
 
 function file.init(gameName)
-	--// Modules
+	--/ Modules \--
 	local Functions = require("core/functions.luau")
 	local UI = require("core/ui.luau")
 	local ESP = require("modules/esp.luau")
 	local Aimbot = require("modules/aimbot.luau")
 
-	--// Variables
+	--/ Variables \--
 	local LocalPlayer: Player = Functions.GetPlayer()
 
-	--// Logic
+	--/ Logic \--
 	local Window = UI:Window({
 		Title = "SuperCool Hub | " .. gameName
 	})
@@ -30,8 +30,7 @@ function file.init(gameName)
 	}
 
 	-- [[ COMBAT ]] --
-
-	--// Aimbot Section
+	--// Aimbot Section \\-
 	local AimbotSection = Tabs.Combat:Section({ Label = "Aimbot" })
 
 	AimbotSection:Toggle({
@@ -52,8 +51,7 @@ function file.init(gameName)
 	})
 
 	-- [[ VISUALS ]] --
-
-	--// ESP Section
+	---// ESP Section \\-
 	local ESPSection = Tabs.Visuals:Section({ Label = "ESP" })
 
 	ESPSection:Toggle({
@@ -78,8 +76,7 @@ function file.init(gameName)
 	})
 
 	-- [[ PLAYER ]] --
-
-	--// Player Modification Section
+	--// Player Modification Section \\-
 	local PlayerModsSection = Tabs.Visuals:Section({ Label = "Player Modifications" })
 
 	PlayerModsSection:Slider({

@@ -1,7 +1,7 @@
 --!nocheck
 --!nolint
 
-local game = cloneref(game)
+local game = cloneref and cloneref(game) or game
 local gPID = game.PlaceId
 
 local files = {

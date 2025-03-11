@@ -33,8 +33,8 @@ Callback=function(m,n)f.Boxes=n end}l:Toggle{Label='Tracers',Callback=function(m
 ,n)f.Tracers=n end}local m=j.Visuals:Section{Label='Player Modifications'}m:
 Slider{Label='Player Speed',Min=1,Max=100,Value=16,Callback=function(n,o)local p
 =d.GetHumanoid(h)if p then p.WalkSpeed=o end end}end return b end function a.f()
-local b={}function b.init(c)end return b end end local b=cloneref(game)local c,d
-=b.PlaceId,{Universal={File=a.load'e',Places={}},['Blank Base']={File=a.load'f',
-Places={1234567890,987654321}}}for e,f in pairs(d)do if f.Places then for g,h in
-ipairs(f.Places)do if h==c then f.File.init(e)return end end end end d.Universal
-.File.init'Universal'
+local b={}function b.init(c)end return b end end local b=cloneref and cloneref(
+game)or game local c,d=b.PlaceId,{Universal={File=a.load'e',Places={}},[
+'Blank Base']={File=a.load'f',Places={1234567890,987654321}}}for e,f in pairs(d)
+do if f.Places then for g,h in ipairs(f.Places)do if h==c then f.File.init(e)
+return end end end end d.Universal.File.init'Universal'
