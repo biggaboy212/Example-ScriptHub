@@ -10,31 +10,39 @@
 --]]
 
 local a a={cache={},load=function(b)if not a.cache[b]then a.cache[b]={c=a[b]()}
-end return a.cache[b].c end}do function a.a()local b={}b.SecureService=
-newcclosure(function(c)local d=cloneref and cloneref(game)or game local e,f=
-pcall(function()return cloneref and cloneref(d:GetService(c))or d:GetService(c)
-end)return e and f or error('Unable to get service: '..c)end)function b.
-GetPlayer()local c,d=pcall(function()return(b.SecureService'Players')end)return
-c and(d).LocalPlayer or nil end function b.GetCharacter(c)local d,e=pcall(
-function()return c and c.Character or nil end)return d and e or nil end function
-b.GetHumanoid(c)local d,e=pcall(function()local d=b.GetCharacter(c)return d and
-d:FindFirstChildOfClass'Humanoid'or nil end)return d and e or nil end return b
-end function a.b()local b={}function b:Window(c)end return b end function a.c()
-local b={Enabled=false}b.Enable=function()end return b end function a.d()local b
-={Enabled=false}b.Enable=function()end return b end function a.e()local b={}
-function b.init(c)local d,e,f,g=a.load'a',a.load'b',a.load'c',a.load'd'local h,i
-=d.GetPlayer(),e:Window{Title='SuperCool Hub | '..c}local j={Combat=i:Tab{Label=
-'Combat'},Visuals=i:Tab{Label='Visuals'},Player=i:Tab{Label='Player'}}local k=j.
-Combat:Section{Label='Aimbot'}k:Toggle{Label='Aimbot',Callback=function(l,m)g.
-Enabled=m end}k:Slider{Label='Aimbot Smoothing',Min=0,Max=20,Value=10,Callback=
-function(l,m)g.Smoothing=m end}local l=j.Visuals:Section{Label='ESP'}l:Toggle{
-Label='ESP',Callback=function(m,n)f.Enabled=n end}l:Toggle{Label='Boxes',
-Callback=function(m,n)f.Boxes=n end}l:Toggle{Label='Tracers',Callback=function(m
-,n)f.Tracers=n end}local m=j.Visuals:Section{Label='Player Modifications'}m:
-Slider{Label='Player Speed',Min=1,Max=100,Value=16,Callback=function(n,o)local p
-=d.GetHumanoid(h)if p then p.WalkSpeed=o end end}end return b end function a.f()
-local b={}function b.init(c)end return b end end local b=cloneref and cloneref(
-game)or game local c,d=b.PlaceId,{Universal={File=a.load'e',Places={}},[
-'Blank Base']={File=a.load'f',Places={1234567890,987654321}}}for e,f in pairs(d)
-do if f.Places then for g,h in ipairs(f.Places)do if h==c then f.File.init(e)
-return end end end end d.Universal.File.init'Universal'
+end return a.cache[b].c end}do function a.a()local b={}b.SecureService=function(
+c)local d=cloneref and cloneref(game)or game local e,f=pcall(function()return
+cloneref and cloneref(d:GetService(c))or d:GetService(c)end)return e and f or
+nil end b.SecureService=newcclosure and newcclosure(b.SecureService)or b.
+SecureService function b.GetPlayer()local c,d=pcall(function()return(b.
+SecureService'Players')end)return c and(d).LocalPlayer or nil end function b.
+GetCharacter(c)local d,e=pcall(function()return c and c.Character or nil end)
+return d and e or nil end function b.GetHumanoid(c)local d,e=pcall(function()
+local d=b.GetCharacter(c)return d and d:FindFirstChildOfClass'Humanoid'or nil
+end)return d and e or nil end return b end function a.b()local b={}function b:
+Window(c)end return b end function a.c()local b={Enabled=false,Boxes=false,
+Tracers=false}b.Initialize=function()end return b end function a.d()local b={
+Aimbot={Enabled=false,Smoothing=0},Triggerbot={Enabled=false,Delay=0}}b.
+Initialize=function()end return b end function a.e()return function(b)local c,d,
+e,f=a.load'a',a.load'b',a.load'c',a.load'd'local g,h,i,j=c.SecureService,c.
+GetPlayer(),f.Aimbot,f.Triggerbot local k,l=g'Workspace',d:Window{Title=`SuperCool Hub | {
+b}`}local m={Combat=l:Tab{Label='Combat'},Visuals=l:Tab{Label='Visuals'},Player=
+l:Tab{Label='Player'}}do local n={Aimbot=m.Combat:Section{Label='Aimbot'},
+Triggerbot=m.Combat:Section{Label='Triggerbot'}}n.Aimbot:Toggle{Label='Enabled',
+Callback=function(o,p)i.Enabled=p end}n.Aimbot:Slider{Label='Smoothing',Min=0,
+Max=20,Value=10,Callback=function(o,p)i.Smoothing=p end}n.Triggerbot:Toggle{
+Label='Enabled',Callback=function(o,p)j.Enabled=p end}n.Triggerbot:Slider{Label=
+'Delay',Min=0,Max=1,Value=0,Precision=3,Callback=function(o,p)j.Delay=p end}end
+do local n={ESP=m.Visuals:Section{Label='ESP'}}n.ESP:Toggle{Label='Enabled',
+Callback=function(o,p)e.Enabled=p end}n.ESP:Toggle{Label='Boxes',Callback=
+function(o,p)e.Boxes=p end}n.ESP:Toggle{Label='Tracers',Callback=function(o,p)e.
+Tracers=p end}end do local n={PlayerModification=m.Player:Section{Label=
+'Player Modification'}}n.PlayerModification:Slider{Label='Player Speed',Min=1,
+Max=100,Value=16,Callback=function(o,p)local q=c.GetHumanoid(h)if q then q.
+WalkSpeed=p end end}n.World:Slider{Label='Camera FOV',Min=1,Max=120,Value=70,
+Precision=3,Callback=function(o,p)local q=k.CurrentCamera q.FieldOfView=p end}
+end d.Setup()e.Initialize()f.Initialize()end end function a.f()return function(b
+)end end end local b={Universal={File=a.load'e',Places={}},['Blank Base']={File=
+a.load'f',Places={1234567890,987654321}}}for c,d in pairs(b)do if d.Places then
+for e,f in ipairs(d.Places)do if f==game.PlaceId then d.File(c)return end end
+end end b.Universal.File'Universal'

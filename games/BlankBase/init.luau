@@ -1,9 +1,5 @@
 --!nocheck
 
-local file = {}
-
-function file.init(gameName)
-    -- All logic (including variables and imports) should go in your init function
+return function(gameName)
+    -- All logic (including variables and imports) should go in this function
 end
-
-return file

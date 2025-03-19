@@ -1,11 +1,15 @@
---[[
-	An example ESP module
+--[[ 
+    An example ESP module
 ]]
 
-local ESP = { Enabled = false }
+local Esp = {
+	Enabled = false,
+	Boxes = false,
+	Tracers = false
+}
 
-ESP.Enable = function()
-
+Esp.Initialize = function()
+	--// Some ESP logic here
 end
 
-return ESP
+return Esp

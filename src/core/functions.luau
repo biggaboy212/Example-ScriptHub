@@ -1,21 +1,21 @@
 --[[
     An example module for reusuable functions.
-    Functions that you will use in most of your scripts.
+    Functions that you will use in most of your scripts/modules.
 ]]
 
 local Functions = {}
 
-Functions.SecureService = newcclosure(function(service: string): Instance
-    local gameRef = cloneref and cloneref(game) or game
+Functions.SecureService = function(service: string): ServiceProvider
+    local _game = cloneref and cloneref(game) or game
     local success, result = pcall(function()
-        return cloneref and cloneref(gameRef:GetService(service)) or gameRef:GetService(service)
+        return cloneref and cloneref(_game:GetService(service)) or _game:GetService(service)
     end)
-    return success and result or error("Unable to get service: " .. service)
-end)
+    return success and result or nil
+end; Functions.SecureService = newcclosure and newcclosure(Functions.SecureService) or Functions.SecureService
 
 function Functions.GetPlayer(): Player?
     local success, result = pcall(function()
-        return Functions.SecureService("Players") :: Players
+        return Functions.SecureService("Players") :: ServiceProvider
     end)
     return success and (result :: Players).LocalPlayer or nil
 end
