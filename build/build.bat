@@ -1,6 +1,8 @@
 :: This batch file builds your project and appends a header to the top of it.
 :: If you have the batch runner extension, press the "Run" triangle at the top right of the tab bar.
 
+:: If it says darklua isn't recognized, you can either add it as an environment variable, or replace "darklua" below with a direct file reference to it.
+
 @echo off
 setlocal
 

@@ -1,13 +1,13 @@
 --!nocheck
 
--- This file is non functioning, it's a reference to how your script could look
+-- This file is non functioning, it's a reference to how your script could look like
 
 return function(gameName)
 	--// Imports
 	local Functions = require("core/functions.luau");
-	local Ui 		= require("core/ui.luau");
-	local Esp 		= require("modules/esp.luau");
-	local Aiming 	= require("modules/aiming.luau");
+	local Ui = require("core/ui.luau");
+	local Esp = require("modules/esp.luau");
+	local Aiming = require("modules/aiming.luau");
 
 	--// Methods
 	local GetService = Functions.SecureService;
