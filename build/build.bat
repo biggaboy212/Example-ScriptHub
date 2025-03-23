@@ -2,8 +2,8 @@
 :: Use the build keybind (Ctrl + Shift + B) to run it.
 
 :: If the output is "darklua isn't recognized ..." you can either:
-:: - Add "darklua" as an environment variable in Windows
-:: - or replace "darklua" below with a direct file reference (in quotes)
+::  - Add "darklua" as an environment variable in Windows
+::  - or replace "darklua" below with a direct file reference (in quotes)
 
 @echo off
 setlocal
