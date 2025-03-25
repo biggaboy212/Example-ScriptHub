@@ -9,7 +9,7 @@
 setlocal
 
 where darklua >nul 2>nul || (
-    echo Error: darklua  not found. Ensure it's in your PATH.
+    echo Error: darklua not found. Ensure it's in your PATH.
     exit /b 1
 )
 

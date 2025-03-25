@@ -8,8 +8,11 @@ local Esp = {
 	Tracers = false
 }
 
-Esp.Initialize = function()
+function Esp:Initialize()
 	--// Some ESP logic here
+	print("Esp module Initialized!")
+
+	return Esp
 end
 
 return Esp

@@ -1,29 +1,32 @@
 --!nocheck
 --!nolint
 
-local files = {
-    ["Universal"] = {
-        File = require("games/Universal/init.luau"),
-        Places = {}
+local Files = {
+    Universal = {
+        Name = "Universal",
+        Load = require("games/Universal/init.luau"),
     },
-    ["Blank Base"] = {
-        File = require("games/BlankBase/init.luau"), 
-        Places = { -- Accepts PlaceId's
+
+    {
+        Name = "Blank Base",
+        Load = require("games/BlankBase/init.luau"),
+        Places = { -- List of PlaceId's
             1234567890,
             0987654321
         }
     }
 }
 
-for gameName, data in pairs(files) do
-    if data.Places then
-        for _, placeId in ipairs(data.Places) do
-            if placeId == game.PlaceId then
-                data.File(gameName)
-                return
+-- Loop through Files and check if any Id in the Places table match the PlaceId of the current game
+for _, Data in pairs(Files) do
+    if Data.Places then
+        for _, PlaceId in ipairs(Data.Places) do
+            if PlaceId == game.PlaceId then
+                return Data:Load()
             end
         end
     end
 end
 
-files.Universal.File("Universal")
+-- If no game was loaded, load the Universal script
+return Files.Universal:Load()

@@ -13,8 +13,11 @@ local Aiming = {
 	}
 }
 
-Aiming.Initialize = function()
+function Aiming:Initialize()
 	--// Some aiming logic here
+	print("Aiming module Initialized!")
+
+	return Aiming
 end
 
 return Aiming

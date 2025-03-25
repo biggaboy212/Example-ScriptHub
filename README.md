@@ -14,6 +14,6 @@ Look at the wiki to start: <https://github.com/biggaboy212/Example-ScriptHub/wik
 
 ### To Build
 
-Install [DarkLua](https://github.com/seaofvoices/darklua/releases/latest)
+Install [DarkLua](https://github.com/seaofvoices/darklua/releases/latest) (Add 'darklua' as an evironment variable,)
 
 Press ***Ctrl + Shift + B*** to build

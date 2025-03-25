@@ -1,0 +1,3 @@
+# What is this?
+
+The "globals" folder hosts type definitions, it gives you intellisense for exploit functions like gethui, setclipboard, Drawing.new, etc...

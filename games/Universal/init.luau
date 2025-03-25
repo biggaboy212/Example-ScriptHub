@@ -2,27 +2,28 @@
 
 -- This file is non functioning, it's a reference to how your script could look like
 
-return function(gameName)
+return function(self)
 	--// Imports
 	local Functions = require("core/functions.luau");
 	local Ui = require("core/ui.luau");
-	local Esp = require("modules/esp.luau");
-	local Aiming = require("modules/aiming.luau");
+	local Esp = require("modules/esp.luau"):Initialize();
+	local Aiming = require("modules/aiming.luau"):Initialize();
 
 	--// Methods
 	local GetService = Functions.SecureService;
 
 	--// Variables
-	local LocalPlayer: Player = Functions.GetPlayer();
 	local Aimbot = Aiming.Aimbot;
 	local Triggerbot = Aiming.Triggerbot;
+	
+	local LocalPlayer: Player = Functions.GetPlayer();
 
 	--// References
-	local Workspace: Workspace = GetService("Workspace")
+	local Workspace: Workspace = GetService("Workspace");
 
 	--// UI Begin
 	local Window = Ui:Window({
-		Title = `SuperCool Hub | {gameName}`
+		Title = `SuperCool Hub | {self.Name}`
 	})
 	
 	local Tabs = {
@@ -132,7 +133,7 @@ return function(gameName)
 			end
 		})
 
-		Sections.World:Slider({
+		Sections.PlayerModification:Slider({
 			Label = "Camera FOV",
 			Min = 1,
 			Max = 120,
@@ -141,13 +142,13 @@ return function(gameName)
 			Callback = function(self, Value)
 				local CurrentCamera: Camera = Workspace.CurrentCamera
 
-				CurrentCamera.FieldOfView = Value
+				if CurrentCamera then
+					CurrentCamera.FieldOfView = Value
+				end
 			end
 		})
 	end
 
 	--// Initialize
-	Ui.Setup()
-	Esp.Initialize()
-	Aiming.Initialize()
+	print(`SuperCool Hub Initialized | {self.Name}`);
 end

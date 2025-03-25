@@ -1,6 +1,5 @@
 --[[
     An example module for reusuable functions.
-    Functions that you will use in most of your scripts/modules.
 ]]
 
 local Functions = {}
