@@ -1,6 +1,9 @@
 --!nocheck
 --!nolint
 
+-- This is your loader, it's set up to auto-load, but you can replace it with a GUI loader.
+-- All game files must be directly imported for darklua to include it.
+
 local Files = {
     Universal = {
         Name = "Universal",
@@ -10,10 +13,12 @@ local Files = {
     {
         Name = "Blank Base",
         Load = require("games/BlankBase/init.luau"),
-        Places = { -- List of PlaceId's
-            1234567890,
-            0987654321
-        }
+        Places = { 1234567890, 0987654321 } -- List of PlaceId's
+    },
+    {
+        Name = "Blank Base 2",
+        Load = require("games/BlankBase2/init.luau"),
+        Places = { 123123123, 321312321 }
     }
 }
 

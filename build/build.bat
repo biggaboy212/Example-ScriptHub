@@ -1,9 +1,8 @@
 :: This batch file builds your project and appends a header to the top of it.
 :: Use the build keybind (Ctrl + Shift + B) to run it.
 
-:: If the output is "darklua isn't recognized ..." you can either:
-::  - Add "darklua" as an environment variable in Windows
-::  - or replace "darklua" below with a direct file reference (in quotes)
+:: Install darklua via aftman to build:
+::   aftman add seaofvoices/darklua
 
 @echo off
 setlocal

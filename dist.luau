@@ -51,7 +51,9 @@ Max=100,Value=16,Callback=function(o,p)local q=c.GetHumanoid(j)if q then q.
 WalkSpeed=p end end}n.PlayerModification:Slider{Label='Camera FOV',Min=1,Max=120
 ,Value=70,Precision=3,Callback=function(o,p)local q=k.CurrentCamera if q then q.
 FieldOfView=p end end}end print(`SuperCool Hub Initialized | {b.Name}`)end end
-function a.f()return function(b)end end end local b={Universal={Name='Universal'
-,Load=a.load'e'},{Name='Blank Base',Load=a.load'f',Places={1234567890,987654321}
-}}for c,d in pairs(b)do if d.Places then for e,f in ipairs(d.Places)do if f==
-game.PlaceId then return d:Load()end end end end return b.Universal:Load()
+function a.f()return function(b)end end function a.g()return function(b)end end
+end local b={Universal={Name='Universal',Load=a.load'e'},{Name='Blank Base',Load
+=a.load'f',Places={1234567890,987654321}},{Name='Blank Base 2',Load=a.load'g',
+Places={123123123,321312321}}}for c,d in pairs(b)do if d.Places then for e,f in
+ipairs(d.Places)do if f==game.PlaceId then return d:Load()end end end end return
+b.Universal:Load()
