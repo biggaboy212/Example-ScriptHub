@@ -15,7 +15,8 @@ Look at the wiki to start: <https://github.com/biggaboy212/Example-ScriptHub/wik
 ### To Build
 
 - Install [DarkLua](https://github.com/seaofvoices/darklua/releases/latest) via [Aftman](https://github.com/LPGhatguy/aftman/releases)
-```
+
+```batch
 aftman add seaofvoices/darklua
 ```
 
