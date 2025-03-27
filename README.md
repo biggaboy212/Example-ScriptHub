@@ -4,7 +4,7 @@ Authored by biggaboy212
 
 ## Project Setup
 
-Youtube tutorial: https://www.youtube.com/watch?v=xQCqiYnz2pU
+Youtube tutorial: <https://www.youtube.com/watch?v=xQCqiYnz2pU>
 
 ### Extensions Recommended
 
