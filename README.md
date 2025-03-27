@@ -4,7 +4,7 @@ Authored by biggaboy212
 
 ## Project Setup
 
-Look at the wiki to start: <https://github.com/biggaboy212/Example-ScriptHub/wiki>
+Youtube tutorial: https://www.youtube.com/watch?v=xQCqiYnz2pU
 
 ### Extensions Recommended
 
